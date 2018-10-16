@@ -122,9 +122,9 @@ print("最后的邀请名单为："+str((invite_name)))
 
 #使用sort()方法对列表进行永久性排序(再也无法恢复到原来的排序）
 cars1 = ['bmw','audi','toyota','subaru']   #元素全是小写字母
-cars1.sort()   #默认升级排序
+cars1.sort() #永久-默认升级排序
 print(cars1)     #或直接写成print(cars.sorted())
-cars1.sort(reverse=True)   #将列表元素进行降序排列
+cars1.sort(reverse=True)   #永久-将列表元素进行降序排列
 print(cars1)
 
 #使用sorted()函数对列表进行临时排序（不影响他们在列表中原始排列顺序）
@@ -133,4 +133,42 @@ print(sorted(cars2))   #对列表进行临时性升级排序
 print(cars2)          #原列表元素位置不变
 print(sorted(cars2,reverse=True))    #对列表进行临时性降序排序
 
-#注意：上面sort（）是方法-Function，而sorted（）是函数-method
+#注意：上面sort（）是方法method-类里面定义的叫方法，而sorted（）是函数function-类外面定义的是函数
+
+
+#倒着打印列表（反转列表元素的排列顺序）使用方法reverse()
+cars3 = ['bmw','audi','toyota','subaru','Fort']
+cars3.reverse()
+print(cars3)
+#reserve()对列表进行永久性修改排列顺序，但再次调用resever()即可恢复原来的排列顺序
+
+
+
+#使用函数len（）获取列表长度
+cars4 = ['bmw','audi','toyota','subaru','Fort','benz']
+print(len(cars4))
+
+
+
+
+#p41练习
+L = ['xinduqiao','dali','jiuzaigou','ouzhou','xinjiang']
+print(L)
+print(sorted(L))    #临时升序排列
+print(L)
+print(sorted(L,reverse=True))    #临时倒序排列
+print(L)
+
+L.reverse()   #对列表进行倒序排列
+print(L)
+L.reverse()   #再次对列表进行倒序（恢复原来的顺序）
+print(L)
+
+L.sort()  #对列表进行永久性升序排列
+print(L)
+L.sort(reverse=True)   #对列表进行永久性降序
+print(L)
+
+print(len(L))
+
+print(L[4])
