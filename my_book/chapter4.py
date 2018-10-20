@@ -78,4 +78,17 @@ print(s2)
 for n in s2:
     print(n)
 
-s3 = [value]
+#创建一个列表，包含1~10的立方，再将这些数字打印出来
+s3 = [v **3 for v in range(1,11)]
+print(s3)
+for y in s3:
+    print(y)
+
+#切片————指定要使用的第一个元素的索引和最后一个元素的索引+1（与range（）类似）
+#打印出前三名队员
+players = ['charls','martina','michael','florence','eli']
+print(players[0:3])
+
+
+
+
