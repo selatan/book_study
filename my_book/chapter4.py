@@ -47,6 +47,8 @@ for value in range(1,11):
 print(squares)
 
 
+
+
 digits = [1,2,3,4,5,6,7,8,9,0]
 print(min(digits))   #打印列表中最小值
 print(max(digits))   #打印列表中最大值
@@ -59,36 +61,50 @@ squares1 = [value**2 for value in range(1,11)]
 print(squares1)
 
 
-#P54练习
-#使用for（）循环打印1~20（包含）
+
+#p54页练习
+#使用一个for循环打印数字1~20
+for t in range(1,21):
+    print(t)
+
+#创建一个列表包含1~20中的奇数
 s=[]
-for i in range(1,21):
-    s.append(i)
+for r in range(1,21,2):
+    s.append(r)
 print(s)
 
-#创建一个列表，包含1~20中的奇数，再将这些数字打印出来
-s1 = [i for i in range(1,21,2) ]
+#创建一个列表,包含3~30中能被3整除的数字
+s1 = []
+for d in range(3,31,3):
+    s1.append(d)
 print(s1)
-for x in s1:
-    print(x)
 
-#创建一个列表，包含3~30中能被3整除的数字，再将这些数字打印出来
-s2 = [m for m in range(3,31,3)]
+#创建一个列表,包含1~10的三次方
+s2 = []
+for e in range(1,11):
+    s2.append(e**3)
 print(s2)
-for n in s2:
-    print(n)
 
-#创建一个列表，包含1~10的立方，再将这些数字打印出来
-s3 = [v **3 for v in range(1,11)]
+#使用列表解析生成一个列表,其中包含前15个数字的立方
+s3 = [v**3 for v in range(1,16)]
 print(s3)
-for y in s3:
-    print(y)
-
-#切片————指定要使用的第一个元素的索引和最后一个元素的索引+1（与range（）类似）
-#打印出前三名队员
-players = ['charls','martina','michael','florence','eli']
-print(players[0:3])
 
 
+#切片
+players = ['charles','martina','michael','florence','eli']
+print(players[0:3])   #打印出前三名队员
+print(players[1:4])    #打印出第2~4名队员
+print(players[:2])     #如果没有指定第一个索引,默认从列表开头开始
+print(players[2:])     #不指定终止索引,默认终止于末尾
+print(players[-2:])    #无论列表多长,取出末尾的2个元素
 
+#遍历切片-如果要遍历列表的部分元素,可在for循环中使用切片
+#遍历前三名队员,并打印他们的名字
+for p in players[0:3]:
+    print(p.title())
 
+#复制列表
+my_food = ['pizza','falafel','carrot cake']
+friend_food = my_food[:]
+print("My friend's favorite foods are :")
+print(friend_food)
