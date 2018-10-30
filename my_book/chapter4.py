@@ -12,7 +12,6 @@ for car in cars:
 print("It's cars, "+ str(cars))
 
 
-
 #50页练习
 books = ['java','python','PHP','C++']
 for book in books:
@@ -108,3 +107,10 @@ my_food = ['pizza','falafel','carrot cake']
 friend_food = my_food[:]
 print("My friend's favorite foods are :")
 print(friend_food)
+
+
+
+
+
+
+#元组 -不可变的列表称为元组，使用圆括号来标识
