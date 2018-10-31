@@ -23,11 +23,25 @@ else:
     print('bmw in cars')
 
 
-#if~elif~else
+#if~elif~else---------4岁以下免费，4~18岁收费5美元，18岁（含）以上收费10美元
 age = 12
 if age <4:
     print('Yout admissionh cost is $0')
 elif age <18:
-    print('Your admission cost is $5')
+    print('Your admission cost is $5')          #可以使用多个elif语句
 else:
     print('Your admission cost is $10')
+
+
+#使用多个elif代码块  ------4岁以下免费，4~18岁收费5美元，18岁（含）以上收费10美元，65岁以上收费5美元
+age = 12
+if age < 4:
+    print('Yout admissionh cost is $0')
+elif age < 18:
+    print('Your admission cost is $5')
+elif age <65:
+    print('Your admission cost is $10')
+else:
+    print('You admission cost is $5')
+
+
