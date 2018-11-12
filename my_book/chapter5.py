@@ -167,5 +167,5 @@ for new_user in new_users:
     else:
         print("这个用户名:"+new_user+" 未被占用")
 
-#怎么把一个列表中的所有元素转为大写
+#怎么把一个列表中的所有元素转为大写？？
 
