@@ -114,3 +114,58 @@ for pen in pens:
     else:
         print('这支笔还可以用:'+ pen)
 
+
+
+#确定列表不是空的
+requested_toppings=[]
+if requested_toppings:           #列表不为空时返回true
+    for requested_topping in requested_toppings:
+        print("Adding"+requested_topping+".")
+    print("\n Finished making your pizza!")
+else:                            #列表为空时返回false
+    print("Are you sure you want a plain pizza?")
+
+
+#使用多个列表
+available_toppings = ['mushrooms','olives','green peppers','pepperoni','pineapple','extra cheese']
+requested_toppingss = ['mushrooms','french fries','extra cheese']
+for requested_topping in requested_toppingss:
+    if requested_topping in available_toppings:
+        print('Adding '+requested_topping+'.')
+else:
+    print("we don't have"+requested_topping+'.')
+print("Finished making your pizza.")
+
+
+
+#p79
+#5-8
+users=['ada','admin','lily','tom','yamy']
+for user in users:
+    if user =='admin':
+        print("Hello "+user+','+"would you like to see a status reports?")
+    else:
+        print("Hello "+user+','+"thank you for logging in again.")
+
+#5-9
+users1=[]
+if users1:
+    for user in users1:
+        if user == 'admin':
+            print("-Hello " + user + ',' + "would you like to see a status reports?")
+        else:
+            print("-Hello " + user + ',' + "thank you for logging in again.")
+else:
+    print("We need to find some users")
+
+#5-10
+current_users=['Bob','amy','vivian','emma','aha']
+new_users = ['amada','lucy','emma','bob','kiven']
+for new_user in new_users:
+    if new_user in current_users:
+        print("用户名:"+new_user+" 已被占用，请输入其他的用户名")
+    else:
+        print("这个用户名:"+new_user+" 未被占用")
+
+#怎么把一个列表中的所有元素转为大写
+
