@@ -47,3 +47,56 @@ print('New x :'+ str(alien_3['x']))
 
 
 #删除键值对
+#使用del语句删除键值对，必须指定字典名和要删除的键
+alien_4 = {'color':'green','point':5}
+print(alien_4)
+del alien_4['point']
+print(alien_4)
+
+
+#p87
+#6-1
+friends = {
+    'first_name':'zhang',
+    'last_name':'zan',
+    'age':1,
+    'city':'chengdu',
+}
+print(friends['first_name'])
+print(friends['last_name'])
+print(friends['age'])
+print(friends['city'])
+
+#6-2
+favorite_nums = {
+    'Amy':88,
+    'Tom':25,
+    'Lily':99,
+    'Join':100,
+    'Bob':1,
+}
+print("Amy like number : "+str(favorite_nums['Amy'])+'.')
+print("Tom like number : "+str(favorite_nums['Tom']))
+print("Join like number :"+str(favorite_nums['Join']))
+
+#遍历字典
+user_0 ={
+    'username':'efermi',
+    'first':'enrico',
+    'last':'fermi,'
+}
+for k ,v in user_0.items():
+    print("\nkey :"+k)
+    print('value :'+v)
+
+
+favorite_languages={
+    'jen':'python',
+    'sarah':'c',
+    'edward':'ruby',
+    'phil':'python',
+}
+for name,language in favorite_languages.items():
+    print('\n'+name.title() + "'s favorite language is :"+language.title()+'.')
+
+#遍历字典中的所有键
