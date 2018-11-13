@@ -85,7 +85,7 @@ user_0 ={
     'first':'enrico',
     'last':'fermi,'
 }
-for k ,v in user_0.items():
+for k ,v in user_0.items():         #items（）方法，以列表形式返回可遍历的(键, 值) 元组数组
     print("\nkey :"+k)
     print('value :'+v)
 
@@ -99,4 +99,45 @@ favorite_languages={
 for name,language in favorite_languages.items():
     print('\n'+name.title() + "'s favorite language is :"+language.title()+'.')
 
-#遍历字典中的所有键
+#python中字典函数values（）、kesys（）、items（）的用法与区别
+dict = {
+    'name':'HLJ',
+    'age':30,
+    'weight':55,
+    'high':158
+}
+print(dict.keys())
+print(dict.values())
+print(dict.items())
+
+#遍历字典中的所有键  keys（）——遍历字典中所有键，并以列表方式返回
+favorite_languages={
+    'jen':'python',
+    'sarah':'c',
+    'edward':'ruby',
+    'phil':'python',
+}
+for people_name in favorite_languages.keys():
+    print(people_name.title())            #title()方法将每个字符串的首字母变为大写字母
+
+for people_name in favorite_languages:    #输出结果与上面的for循环一样
+    print(people_name.title())
+
+
+#按条件遍历
+favorite_languages={
+    'jen':'python',
+    'sarah':'c',
+    'edward':'ruby',
+    'phil':'python',
+}
+friend = ['phil','sarah']
+for people_name in favorite_languages.keys():
+    print(people_name.title())
+    if people_name in friend:
+        print("Hi "+people_name.title() + " ,I see you favorite language is :"+favorite_languages[people_name]+'.')
+
+if 'mhuang' not in favorite_languages.keys():    #判断“mhuang”是否在字典的key中
+    print("mhuang , please take our poll!")
+
+#按顺序遍历字典中的所有键
