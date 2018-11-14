@@ -231,3 +231,85 @@ for alien in aliens[0:5]:
 
 
 #在字典中存储列表
+pizza ={
+    'crust':'thick',
+    'topping':['mushrooms','extra chees'],
+}
+print("You ordered a "+ pizza['crust']+"-curst pizza "+ "with the following toppings :")
+for topping in pizza['topping']:
+    print(topping)
+
+
+
+favorite_languages={
+    'jen':['python','c'],
+    'sarah':['c'],
+    'edward':['ruby','java'],
+    'phil':['python'],
+}
+for name,languages in favorite_languages.items():
+    print('\n'+name.title()+",s favorite language are :")
+    for language in languages:
+        print(language.title())
+
+#在字典中存储字典
+users ={
+    'huanglj':{
+        'age':25,
+        'city':'shanghai',
+        'weight':50,
+    },
+    'zhangfb':{
+        'age':26,
+        'city':'beijing',
+        'weight':60,
+    }
+}
+for username,user_info in users.items():
+    print(username.title()+" is "+str(user_info['age']) + " years old .")
+    print(username.title()+" is at "+user_info['city'])
+
+
+
+#p99
+#6-8    列表中存储字典
+pet1 = {'name':'dog','admin':'tom'}
+pet2 = {'name':'cat','admin':'join'}
+pet3 = {'name':'panda','admin':'lucy'}
+pets =[pet1,pet2,pet3]
+for pet in pets:
+    print(pet['name'].title()+ "'s admin is "+pet['admin'].title())
+
+#6-9  字典中存储列表
+favorite_places ={
+    'huanglg':['beijing','japan','dali'],
+    'zhangfb':['india','china'],
+    'zhangz':['home']
+    }
+for name ,favorite_place in favorite_places.items():
+    print(name.title() + " favorite places is : " )
+    for place in favorite_place:
+        print(place.title())
+
+#6-11 字典中存储字典
+cities ={
+    'chengdu':{
+        'country':'china',
+        'population':5000,
+        'fact':'panda',
+    },
+    'toyoko':{
+        'country':'japan',
+        'population':4002,
+        'fact':'fushishan',
+    },
+    'beijing':{
+        'coutry':'china',
+        'population':8225,
+        'fact':'The Great Wall',
+    }
+}
+
+for city,info in cities.items():
+    print(city + " is in "+info['country'])
+    print(city.title()+ "'s popilation is "+str(info['population']) +'.')
