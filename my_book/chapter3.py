@@ -173,6 +173,7 @@ print(len(L))
 
 print(L[4])
 
-
+L = ['xinduqiao','dali','jiuzaigou','ouzhou','xinjiang']
+print(L[::-1])               #对列表进行倒序排列
 
 #————over——————

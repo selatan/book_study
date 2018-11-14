@@ -106,9 +106,9 @@ dict = {
     'weight':55,
     'high':158
 }
-print(dict.keys())
-print(dict.values())
-print(dict.items())
+print(dict.keys())         #以列表的形式返回所有键
+print(dict.values())       #以列表的形式返回所有值
+print(dict.items())        #以列表的形式返回所有键值对
 
 #遍历字典中的所有键  keys（）——遍历字典中所有键，并以列表方式返回
 favorite_languages={
@@ -141,3 +141,93 @@ if 'mhuang' not in favorite_languages.keys():    #判断“mhuang”是否在字
     print("mhuang , please take our poll!")
 
 #按顺序遍历字典中的所有键
+favorite_languages={
+    'jen':'python',
+    'sarah':'c',
+    'edward':'ruby',
+    'phil':'python',
+}
+for name in sorted(favorite_languages.keys()):                    #对方法favorite_languages.keys()的结果调用函数sorted（）
+    print(name.title()+ ", thank you for taking the poll")
+
+
+#遍历字典中所有值
+favorite_languages={
+    'jen':'python',
+    'sarah':'c',
+    'edward':'ruby',
+    'phil':'python',
+}
+for language in favorite_languages.values():
+    print(language.title())
+
+#遍历字典中的所有值并去重
+favorite_languages={
+    'jen':'python',
+    'sarah':'c',
+    'edward':'ruby',
+    'phil':'python',
+}
+for language in set(favorite_languages.values()):
+    print(language.title()+'.')
+
+
+#P92
+#6-5
+rivers = {
+    'changjiang':'china',
+    'henghe':'india',
+    'nile':'egypt',
+}
+for river,country in rivers.items():
+    print("The "+river.title() + " runs through "+ country.title())
+
+for r in rivers.keys():
+    print(r.title())
+
+for c in rivers.values():
+    print(c.title())
+
+#6-6
+favorite_languages={
+    'jen':'python',
+    'sarah':'c',
+    'edward':'ruby',
+    'phil':'python',
+}
+names = ['bob','jen','tom']
+for name in names:
+    if name in favorite_languages.keys():
+        print(name.title()+" , thank you for taking poll.")
+    else:
+        print(name.title() +" , please take our poll!")
+
+#嵌套-字典中存储列表、列表中存储字典、字典中存储字典，都称为嵌套
+#在列表中存储字典
+alien_4 = {'color':'green','point':5}
+alien_5 = {'color':'yellow','point':10}
+alien_6 = {'color':'red','point':15}
+aliens = [alien_4,alien_5,alien_6]
+for alien in aliens:
+    print(alien)
+
+aliens = []   #创建一个用于存储外星人的空列表
+for alien_num in range(30):            #创建30个绿色的外星人（循环30次）
+    new_alien = {'color':'green','point':5,'speed':'slow'}
+    aliens.append(new_alien)
+
+for alien in aliens[:5]:    #显示出前5个外星人
+    print(alien)
+
+print("Total number of aliens: "+str(len(aliens)))   #显示创建了多少个外星人
+
+for alien in aliens[0:3]:
+    if alien['color']=='green':
+        alien['color']='yellow'
+        alien['speed']='mediu'
+        alien['point']=10
+for alien in aliens[0:5]:
+    print(alien)
+
+
+#在字典中存储列表

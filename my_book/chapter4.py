@@ -52,6 +52,7 @@ digits = [1,2,3,4,5,6,7,8,9,0]
 print(min(digits))   #打印列表中最小值
 print(max(digits))   #打印列表中最大值
 print(sum(digits))   #打印列表所有值得和
+print(len(digits))   #打印列表的长度
 
 
 #列表解析
