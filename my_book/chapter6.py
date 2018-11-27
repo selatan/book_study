@@ -304,12 +304,11 @@ cities ={
         'fact':'fushishan',
     },
     'beijing':{
-        'coutry':'china',
+        'country':'china',
         'population':8225,
         'fact':'The Great Wall',
     }
 }
-
 for city,info in cities.items():
     print(city + " is in "+info['country'])
     print(city.title()+ "'s popilation is "+str(info['population']) +'.')
