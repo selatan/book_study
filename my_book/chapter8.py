@@ -127,37 +127,78 @@ print(name5)
 #     print("\nHello,"+name6+"!")
 
 
-#8-6
-def city_country(city_name,country):
-    city_info = '"'+city_name+","+country+'"'
-    return city_info
-city1 = city_country('Beijing','China')
-print(city1)
+# #8-6
+# def city_country(city_name,country):
+#     city_info = '"'+city_name+","+country+'"'
+#     return city_info
+# city1 = city_country('Beijing','China')
+# print(city1)
+#
+# #8-7
+# def make_album(singer_name,song_name,songs_num=''):
+#     album = {'singer':singer_name,'song':song_name}
+#     if songs_num:
+#         album['num']=songs_num
+#     return album
+# album1 = make_album("ESON","L.O.V.E")
+# print(album1)
+# album2 = make_album("JONGHYUN",'SO GOODBY')
+# print(album2)
+# album3 = make_album('JAY','J III(EP',6)
+# print(album3)
 
-#8-7
-def make_album(singer_name,song_name,songs_num=''):
-    album = {'singer':singer_name,'song':song_name}
-    if songs_num:
-        album['num']=songs_num
-    return album
-album1 = make_album("ESON","L.O.V.E")
-print(album1)
-album2 = make_album("JONGHYUN",'SO GOODBY')
-print(album2)
-album3 = make_album('JAY','J III(EP',6)
-print(album3)
+# #8-8
+# def make_album(singer_name,album_name):
+#     album = {'singer':singer_name,'song':album_name}
+#     return album
+# while True:
+#     s_name = input("Please input songer name : ")
+#     print("(enter 'q' at any time to quit)")
+#     if s_name =='q':
+#         break
+#     a_name = input("Please input album name : ")
+#     if a_name=='q':
+#         break
+#     info = make_album(s_name,a_name)
+#     print(info)
 
-#8-8
-def make_album(singer_name,album_name):
-    album = {'singer':singer_name,'song':album_name}
-    return album
-while True:
-    s_name = input("Please input songer name : ")
-    print("(enter 'q' at any time to quit)")
-    if s_name =='q':
-        break
-    a_name = input("Please input album name : ")
-    if a_name=='q':
-        break
-    info = make_album(s_name,a_name)
-    print(info)
+
+# #传递列表
+# #假设有一个用户列表，我们要问候其中的每位用户
+# def greet_users(names):
+#     for name in names:
+#         msg = "Hello, "+name+"!"
+#         print(msg)
+# usernames = ['Ada','Bob','Emma']
+# greet_users(usernames)
+
+#在函数中修改列表
+#查看p127-128
+
+
+# #8-9
+# def show_magicians(names):
+#     for name in names:
+#         print("Hi "+name+"!")
+# magician_names = ['Maryy','Ella','Allen','Helln']
+# show_magicians(magician_names)
+
+#8-10
+def show_magicians(name1s):
+    for name in name1s:
+        print("Hi "+name+"!")
+def make_great(name2s,completed_names):
+    while name2s:
+        current_name = name2s.pop()
+        completed_names.append(current_name+", The great")
+names =["hehe",'haha']
+completed_names = []
+make_great(names,completed_names)
+show_magicians(completed_names)
+
+#8-11-后面有时间研究
+
+#传递任意数量的实参
+
+
+
