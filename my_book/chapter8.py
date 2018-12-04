@@ -187,18 +187,69 @@ print(name5)
 def show_magicians(name1s):
     for name in name1s:
         print("Hi "+name+"!")
-def make_great(name2s,completed_names):
+def make_great(name2s,completed_name1s):
     while name2s:
         current_name = name2s.pop()
-        completed_names.append(current_name+", The great")
+        completed_name1s.append(current_name+", The great")
 names =["hehe",'haha']
-completed_names = []
-make_great(names,completed_names)
-show_magicians(completed_names)
+completed_name2s = []
+make_great(names,completed_name2s)
+show_magicians(completed_name2s)
 
 #8-11-后面有时间研究
 
 #传递任意数量的实参
+def make_pizza1(*toppings):    #星号让Python创建一个名为toppings的空元组，并将收到的所有值都装到这个元组中
+    print("\nMaking a pizza with the following toppings: ")
+    for topping in toppings:
+        print("-"+topping)
+make_pizza1('pepperoni')
+make_pizza1('mushrooms','green peppers','extra cheese')
+
+#结合使用位置实参和任意数量实参   -Python先匹配位置实参和关键字实参，再将余下的实参都收集到最后一个形参中（即先放确定的，再放不确定的）
+def make_pizza2(size,*toppings):
+    print("\nMaking a "+str(size)+"-inch pizza with the following toppings:")
+    for topping in toppings:
+        print("- "+topping)
+make_pizza2(16,'pepperoni')
+make_pizza2(12,'mushrooms','green peppers','extra cheese')
+
+#使用任意数量的关键字实参、
+#你知道你将收到有关用户的信息，但不确定是什么样的信息，在下面的实例中，函数接受用户的姓名，同时还接受任意数量的关键字实参
+def build_profile(name,**user_info):
+    profile={}
+    profile['user_name']=name
+    for key,value in user_info.items():        #遍历user_info字典的键值对
+        profile[key]=value           #将user_info的键值对加入profile字典中
+    return profile
+user_profile = build_profile('HuangLJ',age =31,location='chengdu')
+print(user_profile)
+
+
+#8-12
+def make_pizza3(*toppings):
+    print("\nThis is your pizza's toppings:")
+    for topping in toppings:
+        print("-- "+topping)
+make_pizza3('miki','beer','mushrooms')
+
+
+#8-14
+def car_profile(manufacturer,model,**car_info):
+    profile={}
+    profile['manufacturer']=manufacturer
+    profile['model']=model
+    for key,value in car_info.items():
+        profile[key]=value
+    return profile
+car = car_profile('subaru','outback',color='blue',tow_package=True)
+print(car)
+
+
+#将函数存储在模块中
+
+
+
 
 
 
