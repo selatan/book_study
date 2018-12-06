@@ -247,6 +247,15 @@ print(car)
 
 
 #将函数存储在模块中
+#有两个py文件A.py,B.py
+#B.py中# 导入整个模块：import A；B.py中调用A.py中的函数时：A.function_A()
+#B.py中# 导入特定的函数:from A import function_A；B.py中调用A.py中的函数时:function_A()
+#使用as给函数指定别名
+#B.py中# 导入特定的函数:from A import function_A as f_A，B.py中调用时：f_A()
+#使用as给模块指定别名
+#B.py中# 导入模块A:import A as AA，B.py中调用A.py中的函数时：AA.funcitin_A()
+#导入模块中的所有函数
+#B.py中# 导入模块A中的所有函数：from A import *  ；B.py中调用A.py中的函数时：function_A()
 
 
 
