@@ -1,28 +1,39 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
+
+
 #函数
 
 
 #定义一个简单的函数
+
+
 def greet_user():   #定义一个函数
     print("Hello!")         #函数体
 greet_user()    #调用该函数
 
 #向函数传递参数
+
+
 def greet_user(username):       #username是形参
     print("Hello, "+username+".")
 greet_user('HuangLJ')          #HuangLJ是实参
 
 #8-1
+
+
 def display_message():
     print("本章所学习的是函数相关的知识。")
+
+
 display_message()
 
 #8-2
+
+
 def favorite_book(title):
-    print("One of my favorite book is "+ title+' .')
-favorite_book('Python')
+    print("One of my favorite book is "+ title+favorite_book('Python'))
 
 
 #位置实参-调用函数时，Python将函数调用中的每个实参都关联到函数定义中的一个形参，这种关联方式成为位置实参
